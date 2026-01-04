@@ -14,7 +14,7 @@ mv-parents () {
 	if [ ! "$TARGET_PATH" ]; then
 		echo "Too few arguments!"
 		echo "Use 'mv-parents [PATH TO SOURCE] [PATH TO TARGET]'."
-		exit 1
+		return 1
 	fi
 
 	if [ ! -d "$TARGET_DIR" ]; then

@@ -9,7 +9,7 @@ search-apt () {
     if [ ! "$KEYWORD" ]; then
         echo "Too few arguments!"
         echo "Use 'search-apt [KEYWORD TO SEARCH]'."
-        exit 1
+        return 1
     fi
     apt list | grep "$KEYWORD"
 }
